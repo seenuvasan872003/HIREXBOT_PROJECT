@@ -17,12 +17,7 @@ export default function Navbar() {
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <NavLink
-              to="/"
-              className={({ isActive }) =>
-                `hover:text-blue-600 ${isActive ? 'text-blue-600' : 'text-gray-600'}`
-              }
-            >
+            <NavLink to="/" className={({ isActive }) => `hover:text-blue-600 ${isActive ? 'text-blue-600' : 'text-gray-600'}`} >
               Home
             </NavLink>
             <NavLink
