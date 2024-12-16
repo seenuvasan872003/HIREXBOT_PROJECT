@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { Facebook, Instagram, Linkedin, Twitter } from 'lucide-react';
+
 
 export default function Footer() {
   return (
@@ -31,10 +32,26 @@ export default function Footer() {
           <div>
             <h3 className="text-xl font-bold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              <li><Link to="/" className="hover:text-blue-400">Home</Link></li>
-              <li><Link to="/about" className="hover:text-blue-400">About Us</Link></li>
-              <li><Link to="/services" className="hover:text-blue-400">Services</Link></li>
-              <li><Link to="/contact" className="hover:text-blue-400">Contact Us</Link></li>
+              <li>
+                <NavLink to="/" className={({ isActive }) => `hover:text-blue-400   text-white`} >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/about" className={({ isActive }) => `hover:text-blue-400 text-white`} >
+                  About
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/services" className={({ isActive }) => `hover:text-blue-400 text-white`} >
+                  Services
+                </NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact" className={({ isActive }) => `hover:text-blue-400 text-white`} >
+                  Contact
+                </NavLink>
+              </li>
             </ul>
           </div>
           <div>
